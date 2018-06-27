@@ -1,12 +1,358 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>vue_test</title>
-  </head>
-  <body>
-    <div id="app">aaa</div>
-    <!-- built files will be auto injected -->
-  </body>
+﻿
+<!doctype html>
+<html lang="en">
+
+
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">-->
+<head runat="server">
+   <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<title>旅游网</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+   <!--头部-->
+		<div class="head">
+			<div class="head_img">
+				<!--轮播-->
+				<div id="myCarousel" class="carousel slide scrool_lb" data-ride="carousel">
+				<!-- 轮播（Carousel）指标 -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<img alt="" src="img/banner1.jpg" />
+						
+					</div>
+					<div class="item">
+						<img alt="" src="img/14969184362122.jpg" />
+						
+					</div>
+					<div class="item">
+						<img alt="" src="img/baner.jpg" />
+						
+					</div>
+				</div>
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div><!--轮播end-->
+			
+			<!--导航-->
+				<nav id="tf-menu" class="navbar nav_wid navbar-default">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">切换</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand logo" href="index.html"><%=Session["name"] %></a>
+                    </div>
+					
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav navbar-right nav_font" id="menu_back">
+                      		<li><a href="index.html">首页</a></li>
+                        <li><a href="gentuan.aspx">跟团游</a></li>
+                        <li><a href="zizhu.aspx">自助游</a></li>
+                        <li><a href="login.aspx" class="" >登录</a></li>
+                        <li><a href="register.aspx">注册</a></li>
+                      </ul>
+                    </div>
+                </div>
+       </nav><!--导航end-->
+			</div>
+		</div>
+		<!--head end-->
+		
+		<!--热门乡村-->
+		<div class="container">
+			<div class="row clearfix hot">
+			<p>热·门·乡·村</p>
+			<p class="beaut">Beautiful countryside</p>
+			<p class="beaut_img"><img src="img/zs.png"/></p>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-12 hot_list">
+				<div class="col-md-3 col-sm-3 col-xs-3 img_scales"><img class="img-responsive img_scale" src="img/hot1.jpg"/></div>
+				<div class="col-md-3 col-sm-3 col-xs-3 img_scales"><img class="img-responsive img_scale" src="img/hot1.jpg"/></div>
+				<div class="col-md-3 col-sm-3 col-xs-3 img_scales"><img class="img-responsive img_scale" src="img/hot1.jpg"/></div>
+				<div class="col-md-3 col-sm-3 col-xs-3 img_scales"><img class="img-responsive img_scale" src="img/hot1.jpg"/></div>
+				</div>
+			</div>
+			
+			<div class="row clearfix more">
+				<a class="host_more" href="#">查看更多</a>
+			</div>
+			
+		</div><!--热门乡村 end-->
+		
+		<!--热门古镇-->
+		<div class="town">
+			<div class="container">
+				<div class="row clearfix">
+					<p class="town_title">热·门·古·镇</p>
+					<p class="beaut_town">Beautiful town</p>
+				</div>
+				
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<div class="col-md-4 col-sm-4">
+							<div class="twon_img img_scales">
+								<p class="twon_img_title">常德古镇一日游</p>
+								<a href="#"><img class="img-responsive img_scale" src="img/twon1.jpg"/></a>
+								<div class="twon_img_introduce">
+									<p class="pull-left price">￥299</p>
+									<div class="immediately pull-right"><a class="" href="#">立即抢购</a></div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-4 col-sm-4">
+							<div class="twon_img img_scales">
+								<p class="twon_img_title">常德古镇一日游</p>
+								<a href="#"><img class="img-responsive img_scale" src="img/twon1.jpg"/></a>
+								<div class="twon_img_introduce">
+									<p class="pull-left price">￥299</p>
+									<div class="immediately pull-right"><a class="" href="#">立即抢购</a></div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-4 col-sm-4">
+							<div class="twon_img img_scales">
+								<p class="twon_img_title">常德古镇一日游</p>
+								<a href="#"><img class="img-responsive img_scale" src="img/twon1.jpg"/></a>
+								<div class="twon_img_introduce">
+									<p class="pull-left price">￥299</p>
+									<div class="immediately pull-right"><a class="" href="#">立即抢购</a></div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="row clearfix twon_more">
+					<a class="twon_more_font" href="#">查看更多</a>
+				</div>
+			</div>
+		</div>
+		<!--热门古镇 end-->
+		
+		<!--景区导览-->
+		<div class="scenic">
+			<div class="container">
+				<div class="row clearfix scenic_row">
+					<p class="scenic_title">景·区·导·览</p>
+					<p class="beaut_scenic">Scene area guide</p>
+					<p><img src="img/zs.png"/></p>
+				</div>
+				
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<!--//pc端显示-->
+						<div class="col-md-3 col-sm-6 col-xs-6 clear_left">
+							<div class="scenic_border">
+								<div class="scenic_img"><img class="box_show" src="img/scenic.jpg"/></div>
+								<!--<div class="scenic_img_font">
+									<p>柳叶湖</p>
+								</div>-->
+							</div>
+						</div>
+						
+						<div class="col-md-3 col-sm-6 col-xs-6 clear_left">
+							<div class="scenic_border">
+								<div class="scenic_img"><img class="box_show" src="img/scenic2.jpg"/></div>
+								<!--<div class="scenic_img_font">
+									<p>柳叶湖</p>
+								</div>-->
+							</div>
+						</div>
+						
+						<div class="col-md-3 col-sm-6 col-xs-6 clear_left">
+							<div class="scenic_border">
+								<div class="scenic_img"><img class="box_show" src="img/scenic3.jpg"/></div>
+								<!--<div class="scenic_img_font">
+									<p>柳叶湖</p>
+								</div>-->
+							</div>
+						</div>
+						
+						<div class="col-md-3 col-sm-6 col-xs-6 clear_left">
+							<div class="scenic_border">
+								<div class="scenic_img"><img class="box_show" src="img/scenic.jpg"/></div>
+								<!--<div class="scenic_img_font">
+									<p>柳叶湖中</p>
+								</div>-->
+							</div>
+						</div>	
+					</div>
+						
+						<div class="row clearfix scenic_more">
+							<a class="scenic_more_font" href="#">查看更多</a>
+						</div>
+				</div>
+			</div>	
+		</div>
+		<!--景区导览 end-->
+		
+		<!--//美食-->
+		<div class="cate">
+			<div class="container">
+				<div class="row clearfix cate_row">
+					<p class="cate_title">特·色·美·食</p>
+					<p class="cate_scenic">LONG WAN CUISINE</p>
+					<p><img src="img/zs.png"/></p>
+				</div>
+				
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<div class="col-md-3 col-sm-3 col-xs-3 clear_right">
+							<div class="cate_img"><img class="img-responsive" src="img/cate1.png"/></div>
+						</div>
+						
+						<div class="col-md-3 col-sm-3 col-xs-3 clear_right">
+							<div class="cate_img"><img class="img-responsive" src="img/cate3.png"/></div>
+						</div>
+						
+						<div class="col-md-3 col-sm-3 col-xs-3 clear_right">
+							<div class="cate_img"><img class="img-responsive" src="img/cate2.png"/></div>
+						</div>
+						<div class="col-md-3 col-sm-3 col-xs-3 clear_right">
+							<div class="cate_img"><img class="img-responsive" src="img/cate1.png"/></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row clearfix twon_more">
+					<a class="twon_more_font" href="#">查看更多</a>
+				</div>
+				
+			</div>	
+		</div>
+		<!--//美食 end-->
+		
+		<!--旅游动态-->
+		<div class="dynamic">
+			<div class="container">
+				<div class="row clearfix cate_row">
+					<p class="cate_title">最·新·旅·游·动·态</p>
+					<p class="cate_scenic">New tourism trends</p>
+					<p><img src="img/zs.png"/></p>
+				</div>
+				
+				<div class="row clearfix">
+						<div class="col-md-1"></div>
+						<div class="col-md-5 clear_right dt_img"><img class="img-responsive" src="img/dynamic.jpg"/></div>
+						<div class="col-md-6">
+							<div class="dynamic_introduce">
+								<p class="dynamic_title">游客点评</p>
+								<p>
+								<span class="dynamic_content">常德旅游，及阿什顿啊实践啊啥的都阿什顿活别阿斯顿啊是的后果啊少见多怪的好......</span>
+								<span class="dynamic_more"><a href="#">我要点评</a></span>
+								</p>
+							</div>
+							<div class="dynamic_introduce">
+								<p class="dynamic_title">游客点评</p>
+								<p>
+								<span class="dynamic_content">常德旅游地方，及阿asda是啊实啊啊是撒践活别阿斯顿啊是的后果啊少见多怪的好......</span>
+								<span class="dynamic_more message_bg"><a href="#">我要点评</a></span>
+								</p>
+							</div>
+							<div class="dynamic_introduce">
+								<p class="dynamic_title">游客点评</p>
+								<p>
+								<span class="dynamic_content">常德旅大卡司卡上的回复带回家游方，及阿啊实践活别阿斯顿啊是的后果啊少见多怪的好......</span>
+								<span class="dynamic_more yang_bg"><a href="#">我要点评</a></span>
+								</p>
+							</div>
+						</div>
+						
+				</div>
+				
+				
+			</div>
+		</div>
+		<!--旅游动态 end-->
+		
+		<!--footer-->
+		<div class="footer">
+			<div class="container">
+				<div class="row clearfix footer_font">
+					<p>版权@小半所有</p>
+				</div>
+				
+			</div>
+		</div>
+<!-- 按钮触发模态框 -->
+<style type="text/css">
+	.modal{
+		top: 30%;
+	}
+</style>
+
+
+
+<!-- 模态框（register） -->
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					新用户注册
+				</h4>
+			</div>
+			<div class="modal-body">
+                            <div class="form-group">
+                                <label for="uname" class="col-sm-2 control-label">用户名</label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="uname" name="uname" runat="server" class="form-control well" placeholder="请输入用户名"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="upwd" class="col-sm-2 control-label">密码</label>
+                                <div class="col-sm-9">
+                                    <input type="password" id="upwd" name="upwd" runat="server" class="form-control well" placeholder="请输入密码"/>
+                                </div>
+                            </div>
+                        
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+                <asp:Button ID="Button2" runat="server" Text="注册" class="btn btn-primary" 
+                    onclick="Button2_Click1" />
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<script>
+    $(function () {
+        $('#myModal').modal({
+            keyboard: true
+        })
+    });
+</script>
+		
+		
+		
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="dist/js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/nav.js" ></script>
+    </form>
+</body>
 </html>

@@ -1,0 +1,91 @@
+body{
+	background: #f2f2f2;
+}
+.location{
+	margin-top: 15px !important;
+}
+.location_border{
+	border-bottom: 1px solid silver;
+	line-height: 50px;
+	padding-left: 15px;
+}
+
+/*中间内容*/
+.content{
+	
+	background: white;
+	box-shadow: 0 2px 20px 5px #bfbfbf;
+}
+/*分类*/
+.classify{
+	margin-top: 40px;
+}
+.classify_list{
+	border-bottom: 1px solid silver;
+	height: auto;
+	min-height: 30px;
+	margin-top: 9px;
+	
+}
+.classify_list .classify_title{
+	padding-left: 15px;
+}
+.classify_list a{
+	padding-left: 15px;
+	color: rgb(122,111,111);
+	display: inline-block;
+}
+
+
+.show_img{
+	margin-top: 20px;
+}
+
+/*图片展示*/
+.words{
+	border: 1px solid silver;
+}
+.words .words_title{
+	padding-top: 10px;
+	padding-left: 5px;
+	color: black;
+	font-size: 17px;
+	font-weight: bold;
+	
+	
+}
+.words .words_main{
+	padding-left: 10px;
+	padding-right: 10px;
+	color:  rgb(122,111,111);
+	
+}
+.words .words_price{
+	padding-left: 10px;
+	color: #f9556c;
+	font-size: 26px;
+}
+.soldout{
+	width: 100%;
+	height: 35px;
+	background: rgb(245,245,245);
+	border: 1px solid silver;
+}
+.soldout .soldout_font{
+	padding-left: 10px;
+	line-height: 35px;
+}
+.soldout .soldout_color{
+	color: #f9556c;
+	padding-left: 3px;
+}
+.soldout .soldout_pj{
+	color:  rgb(122,111,111);
+	padding-right: 10px;
+}
+
+/*左边广告*/
+.gg{
+	width: 100%;
+	margin-top: 35px;
+}

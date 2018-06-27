@@ -1,0 +1,345 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
+.clear_left{
+	padding-left: 0;
+}
+.clear_right{
+	padding-right: 0;
+}
+
+.head{
+	width: 100%;	
+}
+.head_img{
+	position: relative;
+	width: 100%;
+}
+.banner{
+	width: 100%;
+	height: 640px;
+}
+.head_img img,.banner img{
+	width: 100%;
+	height: 640px;
+}
+.nav_wid{
+	
+	width: 100% !important;
+}
+
+#tf-menu {
+	position: absolute;
+	position: fixed;
+	z-index: 9999;
+	top: -5px;
+	width: 100%;
+	height: 60px;
+	padding-top: 5px;
+	margin-bottom: 0;
+	background: transparent;
+	box-shadow: 5px 2px 5px #3C3C3C;
+	color: white !important;
+	font-weight: bold;
+	font-size: 15px;
+	transition: all 0.5s;
+}
+.nav_font li a{
+	color: #4f4c4c !important;
+	font-family: "微软雅黑";
+	font-weight: 0 !important;font-family: "微软雅黑";
+	font-weight: 500 !important;
+}
+
+.hot{
+	margin-top: 15px;
+	text-align: center;
+}
+.hot p{
+	color: #757575;
+	font-size: 25px;
+	letter-spacing: 6px;
+	font-weight: 500;
+	font-family: "微软雅黑";
+	
+}
+.hot .beaut{
+	font-size: 12px;
+	letter-spacing:0 !important;
+}
+.beaut_img img{
+	width: 47px;
+	height: 35px;
+}
+.img_scales{
+	overflow: hidden !important;
+}
+.hot_list img{
+	width: 100%;
+	display: block;
+	height: auto;
+	box-shadow: 5px 5px 5px silver;
+	transition: transform 1s;
+}
+.more{
+	text-align: center;
+}
+
+.more .host_more{
+	display: inline-block;
+	border: 1px solid silver;
+	width: 196px;
+	height: 49px;
+	color: #adacac;
+	line-height: 49px;
+	margin-top: 30px;
+	font-size: 17px !important;
+}
+.more a:hover{
+	color: #adacac;
+}
+
+/*热门古镇*/
+.town{
+	width: 100%;
+	margin-top: 30px;
+	background: url(../img/twon_bg.jpg);
+}
+.town_title{
+	text-align: center;
+	padding-top: 5px;
+	color: #757575;
+	font-size: 25px;
+	letter-spacing: 6px;
+	font-weight: 500;
+	font-family: "微软雅黑";
+	color: white;
+}
+.beaut_town{
+	text-align: center;
+	font-size: 12px;
+	letter-spacing:0 !important;
+	color: white;
+}
+.twon_img
+{
+	background: white;
+}
+.twon_img img{
+	width: 95%;
+	margin: auto;
+	transition: transform 0.5s;
+}
+
+.twon_img_title{
+	margin: 15px 0 15px 0;
+	font-family: "宋体";
+	padding-left: 8px;
+	font-size: 18px;
+	font-weight: 800;
+}
+.twon_img_introduce{
+	width: 95%;
+	height: 60px;
+	margin: auto;
+	text-align: center;
+	background: #f0f2f2;
+}
+.twon_img_introduce .price{
+	padding-top: 10px;
+	font-size: 30px !important;
+	color: #f9556c;
+}
+.twon_img_introduce .immediately{
+	margin: 15px 13px 0 0;
+	width: 80px;
+	height: 30px;
+	background: #f9556c;
+	line-height: 30px;
+	border-radius: 5px;
+}
+.twon_img_introduce .immediately a{
+	color: white;
+}
+.twon_more
+{	
+	margin-bottom: 23px;
+	text-align: center;
+}
+.twon_more .twon_more_font{
+	display: inline-block;
+	border: 1px solid silver;
+	width: 196px;
+	height: 49px;
+	color: #adacac;
+	background: white;
+	line-height: 49px;
+	margin-top: 30px;
+	font-size: 17px !important;
+}
+
+/*景区导览*/
+.scenic{
+	background: url(../img/scenic_bg.jpg);
+	height: auto;
+	
+}
+.scenic_row{
+	margin-top: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.scenic_row .scenic_title{
+	color: #757575;
+	font-size: 25px;
+	letter-spacing: 6px;
+	font-weight: 500;
+	font-family: "微软雅黑";
+}
+.scenic_row .beaut_scenic{
+	text-align: center;
+	font-size: 12px;
+	letter-spacing:0 !important;
+	color: #757575;
+}
+.scenic_img img{
+	width: 100%;
+	margin: auto;
+}
+.scenic_border{
+	position: relative;
+}
+.scenic_img_font{
+	position: absolute;
+	top: 33%;
+	left: 35%;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	color: white;
+	border-radius: 50%;
+	background: black;
+	opacity: 0.7;
+}
+.scenic_more{
+	margin-bottom: 23px;
+	text-align: center;
+}
+.scenic_more_font{
+	display: inline-block;
+	border: 1px solid #2ba165;
+	width: 196px;
+	height: 49px;
+	color: #2ba165;
+	line-height: 49px;
+	margin-top: 30px;
+	font-size: 17px !important;
+}
+
+/*特色美食*/
+.cate{
+	background: url(../img/cate_bg.jpg);
+}
+.cate_row{
+	margin-top: 25px;
+	text-align: center;
+
+}
+.cate_row .cate_title{
+	color: #757575;
+	font-size: 25px;
+	letter-spacing: 6px;
+	font-weight: 500;
+	font-family: "微软雅黑";
+}
+.cate_row .beaut_scenic{
+	text-align: center;
+	font-size: 12px;
+	letter-spacing:0 !important;
+	color: #757575;
+}
+
+/*旅游动态*/
+.dynamic_introduce{
+	border: 1px solid silver;
+	height: auto;
+	padding-left: 20px;
+	padding-right: 10px;
+	margin-bottom: 8px;
+}
+.dynamic_introduce .dynamic_title{
+	width: 100%;
+	height: auto;
+	font-size: 20px;
+	padding-top: 5px;
+	padding-left: -5px !important;
+}
+.dynamic_introduce .dynamic_content{
+	line-height: 30px;
+}
+.dynamic_introduce .dynamic_more{
+	width: 100%;
+	height: auto;
+}
+.dynamic_introduce .dynamic_more a{
+	float: right;
+	display: block;
+	width: 70px;
+	height: 25px;
+	background: #ff9900;
+	color: white;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 10px;
+	margin-right: 20px;
+}
+.dynamic_introduce .message_bg a{
+	background: #56c95f;
+}
+.dynamic_introduce .yang_bg a{
+	background: #44b4f4;
+}
+
+
+/*版权*/
+.footer{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin-top: 20px;
+	background: #2ba165;
+}
+.footer_font p{
+	margin-top: 15px;
+}
+
+/*图片的缩放*/
+.img_scale:hover{
+	transform: scale(1.1, 1.1);
+}
+
+/*阴影*/
+.box_show:hover{
+	box-shadow: 0 2px 20px 5px #bfbfbf;
+}
+
+
+
+@media only screen and (max-width: 990px) {
+	.dt_img img{
+		width: 100%;
+		padding-right: 15px;
+	}
+}
