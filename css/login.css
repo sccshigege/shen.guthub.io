@@ -1,72 +1,139 @@
-body{
-	background-color: #3682bd !important;
-	height: 100%;
-	width: 100%;
+*{
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+/* html{font-size:62.5%;} */
+ 
+
+a{
+	text-decoration: none;
+	color: black;
+}
+header{
+	width: 6.4rem;
+	height: 0.97rem;
+	/*background-color: pink;*/
+	position: relative;	
+}
+.details_img1{
+	height: 0.24rem;
+    width: 0.24rem;
+    margin-left: 0.38rem;
+    margin-top: 0.39rem;
+    float: left;
+}
+
+.btn1{
+	background-color: transparent;
+	border: none;
+	font-size: 0.12rem;
+	float: right;
+	margin-top: 0.4rem;
+	margin-right: 0.35rem;	
+	color: #88d549;
+	outline: none;
+}
+.btn1>a{
+	
+}
+
+/*over*/
+section{
+	width: 6.4rem;
+	background-color: #eff2ec;
+	padding-top: 0.49rem;
+	height: 10.39rem;
 }
 .login{
-	width: 1000px;
-	height: 600px;
-	background:url(../img/loginbg.jpg);
-	margin: auto;
+	width: 5.47rem;
+	height: 2.4rem;
+	background-color: white;
+	margin:auto;
+	left:0;
+	right: 0;
+	border-radius:0.04rem;
 }
-.login_content{
-	width: 350px;
-	height: 230px;
-	margin: auto;
-	position: absolute;
-	left: 38%;
-	top: 30%;
-	background: #3682bd;
-	box-shadow: 0 0 2px 2px #3682bd;
+
+.user{
+	width: 5.1rem;
+	/*height: 3.8vh;*/
+	overflow: hidden;
+	padding-top: 0.52rem;
+	margin-left: 0.4rem;
 }
-.login_title{
-	width: 100%;
-	height: 40px;
-	background: white;
-	text-align: center;
-	line-height: 40px;
+.loginimg1{
+	width:0.3rem;
+	height: 0.3rem; 
+	float: left;
 }
-.login_title h2{
-	letter-spacing: 3px;
-}
-.name{
-	width: 300px;
-	height: 35px;
-	margin: auto;
-	margin-top: 20px;
-	margin-left: 40px;
-}
-.pwd{
-	width: 300px;
-	height: 35px;
-	margin: auto;
-	margin-top: 20px;
-}
-#names{
-	width: 210px;
-	height: 25px;
-}
-#pwds{
-	width: 210px;
-	height: 25px;
-}
-label{
-	color: white;
-}
-.dl{
-	width: 300px;
-	height: 35px;
-	margin: auto;
-	margin-top: 10px;
-}
-#dl{
-	width: 100px;
-	height: 30px;
-	background: white;
-	border: 1px solid white;
-	color: black;
-	font-weight: bold;
-	letter-spacing: 3px;
-	margin-left: 100px;
+.user_right{
+	width: 4.2rem;
+	height: 0.4rem;
+	float: left;
+	border-bottom: 0.02rem solid #ccc;
+	margin-left: 0.075rem;
 	
+}
+.user_right>input{
+	height: 0.4rem;
+	float: left;
+	outline: none;
+	border: none;
+	text-indent: 0.15rem;
+	font-size: 0.12rem;
+	color: #adadad;
+	font-family: 微软雅黑;
+}
+.loginimg2{
+	float: left;
+	width: 0.3rem;
+	height: 0.35rem;
+}
+.password{
+	width: 5.1rem;
+	/*height: 3.8vh;*/
+	overflow: hidden;
+	/*padding-top: 4.5vh;*/
+	margin-left: 0.4rem;
+	margin-top: 0.4rem;
+}
+.wangjimima{
+	width: 5.47rem;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: 0.28rem;
+}
+.btn2{
+	float: right;
+	border: 0;
+	background-color: transparent;
+}
+.loginbtn{
+	margin-top: 3rem;
+	text-align: center;
+	overflow: hidden;
+}
+.btn3{
+	width: 5.4rem;
+	height: 0.7rem;
+	border: 0;
+	border-radius: 4vw;
+	background-color: #f54d32;
+	color: white;
+	text-align: center;
+	
+	font-family: 微软雅黑;
+	font-size:0.12rem;
+	float: left;
+	margin: 0 auto;
+	margin-left: 0.5rem;
+}
+.bottom{
+	overflow: hidden;
+	margin-top: 1.23rem;
+}
+.loginimg3{
+	width: 6.4rem;
+	float: left;
 }

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="css/orderdetails.css">
+	<title>Document</title>
+</head>
+<body>
+<header>
+	<a href="index.html"><img src="images/11-2收货地址_03_1_03.png" alt="" class="orderdetails_img1"></a>
+	<div class="orderdetails_font">
+			订单详情
+	</div>		
+</header>
+<section>
+	<div class="orderdetails_head">
+		<div class="font">
+			订单信息
+		</div>
+	</div>
+	<div class="orderdetails_details">
+		<div class="details_1">
+			<div class="details_1_left">
+				订单编号
+			</div>
+			<div class="details_1_right">
+
+			</div>
+		</div>
+
+		<div class="details_1">
+			<div class="details_1_left">
+				订单时间
+			</div>
+			<div class="details_2_right">
+
+			</div>
+		</div>
+
+		<div class="details_2">
+			<div class="receiptinformation">
+				收货信息
+			</div>
+			<div class="receipt_name">
+				<div class="name">碧江</div><div class="tel">13757686880</div>
+			</div>
+			<div class="add">
+				浙江省杭州市拱墅区祥园路120号
+			</div>
+		</div>
+
+		<div class="details_1">
+			<div class="details_3_left">
+				配送方式
+			</div>
+			<div class="details_3_right">
+
+			</div>
+		</div>
+		<div class="details_1">
+			<div class="details_3_left">
+				支付方式
+			</div>
+			<div class="details_3_right">
+
+			</div>
+		</div>
+		<div class="details_1">
+			<div class="details_3_left">
+				订单状态
+			</div>
+			<div class="details_3_right">
+
+			</div>
+		</div>
+	</div>
+	<div class="orderdetails_head">
+		<div class="font">
+			价格清单
+		</div>
+	</div>
+	<div class="totalcommodityprice">
+		<div class="details_1">
+			<div class="totalcommodityprice_3_left">
+				商品总价
+			</div>
+			<div class="totalcommodityprice_3_right">
+
+			</div>
+		</div>
+		<div class="details_1">
+			<div class="totalcommodityprice_3_left">
+				运费金额
+			</div>
+			<div class="totalcommodityprice_3_right">
+
+			</div>
+		</div>
+		<div class="details_3">
+			<div class="totalcommodityprice_3_left">
+				合计
+			</div>
+			<div class="totalcommodityprice_3_right">
+
+			</div>
+		</div>
+	</div>
+	<div class="orderdetails_head">
+		<div class="font">
+			商品清单
+		</div>
+	</div>
+	<div class="totollist">
+		<div class="totollist_left">
+			<img src="images/12-订单详情_03.png" class="orderdetails_img2">
+			<div class="tf_font">
+				正宗江西赣南脐橙 新鲜水果橙子<br> 甜嫩多汁 5斤包邮
+			</div>
+		</div>
+		<div class="totllist_right">
+			<div class="danjio">¥ 29.00</div>
+			<div class="count">x1</div>
+		</div>
+	</div>
+	<div class="orderdetails_head">
+		<div class="font">
+			发票
+		</div>
+	</div>
+	<div class="fapiao">
+		<div class="fapiaosec">
+			很抱歉，近期我们暂时不能提供发票。<br>请联系400-888-7888申请，我们将尽快为您补寄。
+		</div>
+	</div>
+	<div class="bot"></div>
+</section>
+<footer>
+	<div class="footer_left">
+		<span class="footer_span1">商品总价 : </span><span class="footer_span2"> ¥87.00</span>
+	</div>
+	<div class="footer_right">
+		<button class="quzhifu">
+			去支付
+		</button>
+	</div>
+</footer>
+</body>
+</html>
+<script src="vue.min.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $(function(){
+
+
+       $.ajax({
+            url:"http://192.168.1.177/GIndent/getGIndent/1",//后台发送请求的地址
+            type:"post",
+			dataType:"json",
+			success:function(result){
+                var xhr = result.userInfo.GIndentById.indentId    //这个是后台返回过来的那个工号
+				var xhr_date=result.userInfo.GIndentById.indentDate
+				var xhr_del=result.userInfo.GIndentById.delivery
+				var xhr_pay=result.userInfo.GIndentById.payment
+                $(".details_1_right").text(xhr); //动态给页面input 赋值
+				$(".details_2_right").text(xhr_date);
+				$(".details_3_right:eq(0)").text(xhr_del);
+				$(".details_3_right:eq(1)").html(xhr_pay);
+				$(".details_3_right:eq(2)").html(result.userInfo.GIndentById.indentState);
+                $(".totalcommodityprice_3_right:eq(0)").html("¥"+result.userInfo.GIndentById.goodsPrice)
+                $(".totalcommodityprice_3_right:eq(1)").html("+"+"¥"+result.userInfo.GIndentById.goodsFreight)
+				$(".totalcommodityprice_3_right:eq(2)").html("¥"+result.userInfo.GIndentById.goodsTotal)
+
+            }
+
+        })
+
+	    $.ajax({
+            url:"http://192.168.1.177/GAddress/getGAddress/1",//后台发送请求的地址
+            type:"post",
+            dataType:"json",
+		    success:function (result) {
+			    $(".add").html(result.userInfo.GAddressById.area+result.userInfo.GAddressById.detailAddress)
+            }
+	    })
+  /*      $.ajax({
+            async : true,
+            url : "http://192.168.1.173/GIndent/getGIndent/1",
+            type : "GET",
+            dataType : "jsonp", // 返回的数据类型，设置为JSONP方式
+            jsonp : 'callback', //指定一个查询参数名称来覆盖默认的 jsonp 回调参数名 callback
+            jsonpCallback: 'handleResponse', //设置回调函数名
+            data : {
+	            id:1,
+	            indentId:"201806121234567890",
+                indentDate:"2018-06-12 16:23:20",
+                delivery:"一周之内全天可送",
+                payment:"微信支付",
+                indentState:"待审核",
+                goodsPrice:87,
+                goodsFreight:0,
+                goodsTotal:84,
+                createDate:"2018-06-12 16:24:18",
+                goodsId:1,
+                userId:1,
+                addressId:1,
+            },
+            success: function(data,xhr){
+             var indentId =xhr;
+             $(".details_1_right").val(indentId)
+            }
+        });*/
+
+    });
+</script>

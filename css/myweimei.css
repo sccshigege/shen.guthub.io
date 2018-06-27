@@ -1,0 +1,226 @@
+*{
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+/* html{font-size:62.5%;} */
+ html{
+	font-size: 12px;
+}  
+
+a{
+	text-decoration: none;
+	color: black;
+}
+header{
+	width: 100vw;
+	height: 8.6vh;
+	/*background-color: red;*/
+}
+.myweimei_img1
+{
+	margin-left: 5.9vw;
+	margin-top: 3.5vh;
+	float: left;
+	width:0.667rem;
+	height:  1rem; 
+	/* height: auto !important;  
+	    max-width: 100% !important; */
+}
+.myweimei_font{
+	margin-top: 3.0vh;
+	margin-left: 32vw;
+	float: left;
+	color: #88d549;
+	font-size: 1.2rem;
+	font-family: 微软雅黑;
+}
+.myweimei_img2{
+	width: 1.16rem;
+	height: 1.16rem;
+	float: right;
+	margin-right: 1.667rem;
+	margin-top:3.5vh;
+}
+section{
+	width: 100vw;
+}
+.myweimei_sec1{
+	position: relative;
+	width: 100vw;
+	height: 12.1rem;
+	background: url(../images/8-我的唯美2_02.png);
+}
+.myweimei_img3{
+	width: 4.5rem;
+	height: 4.5rem;
+	margin-top: 2.5rem;
+	margin-left: 4.08rem;
+}
+.myweimei_img4{
+	width: 0.9rem;
+	height: 0.9rem;
+	position: absolute;
+	left:4rem;
+	top: 3.33rem;
+	z-index: 2;
+}
+.id{
+	position: absolute;
+	top:3.25rem; 
+	left:10rem;
+	color: white;
+	width: 12rem;
+	height:1.833rem;
+	line-height: 1.833rem;
+	text-indent: 1rem;
+	border: 0.083rem solid white;
+	border-radius: 1rem;
+}
+.myweimei_img5{
+	width: 0.85rem;
+	height: 1rem;
+	float: right;
+	vertical-align: middle;
+	margin-right: 1rem;
+	margin-top: 0.5rem;
+}
+.myweimei_btn1{
+	position: absolute;
+	color: white;
+	border: 0;
+	background-color: transparent;
+	font-size: 1rem;
+	font-family: 微软雅黑;
+	top:5.8rem;
+	left:10.9rem ;
+	outline: none;
+}
+.zhanghuyue{
+	position: absolute;
+	font-size: 1rem;
+	color: #8ea56f;
+	left: 3.3rem;
+	bottom: 0.833rem;
+	font-family: 微软雅黑;
+
+}
+.span1{
+	margin-left: 0.5rem;
+	letter-spacing: 0.1rem;
+}
+.fengexian{
+	height: 3.1rem;
+	width: 0.1rem;
+	background-color: white;
+	position: absolute;
+	left: 14rem;
+	bottom:0.5rem;
+}
+.youhui{
+	font-family: 微软雅黑;
+	position: absolute;
+	right:5.833rem ;
+	bottom: 0.833rem;
+	color: white;
+}
+.span2{
+	color: red;
+	font-family: 微软雅黑;
+	margin-left: 1rem;
+}
+
+.myweimei_sec2{
+	height: 57.5vh;
+	width: 100%;
+	background-color:#eff2ec;
+}
+.myweimei_list{
+	width: 97.5%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.myweimei_list_1{
+	margin-top: 2.5rem;
+	/*width: 5.2rem;*/
+	text-align: center;
+	margin-left: 9.3vw;
+	float: left;
+}
+.myweimei_img6{
+	width: 19.5vw;
+	height: 19.5vw;
+}
+.myweimei_list_2{
+	margin-top: 1.66rem;
+	/*width: 5.2rem;*/
+	text-align: center;
+	margin-left:9.3vw;
+	float: left;
+}
+.myweimei_list_1>p,.myweimei_list_2>p{
+	margin-top: 1.66rem;
+	color: #666;
+	font-family: 微软雅黑;
+}
+
+/*over*/
+
+.index_bot{
+	width: 100vw;
+	height: 8.6vh;
+	border-top: 0.05vh solid #88d549;
+}
+.index_bot_list{
+	width: 72vw;
+	margin-left: 7.8vw;
+	/*background-color: red;*/
+	overflow: hidden;
+	float: left;
+}
+.index_bot_list1{
+	height: 8.6vh;
+	float: left;
+	margin-right:8.5vw;
+	text-align: center;
+
+}
+.index_bot_list1>p{
+	font-size: 1.875vw;
+	color: #959a92;
+	margin-top: 0.5vh;
+
+}
+.botimg1{
+	width: 6.25vw;
+	height: 3.1vh;
+	margin-top: 1.1vh;	
+}
+.botimg2{
+	width: 5.7vw;
+	height: 3.4vh;
+	margin-top: 0.8vh;
+	
+}
+.botimg3{
+	width: 11.5vw;
+	height: 7.3vh;
+	margin-top: 0.3vh;
+}
+.botimg4{
+	width:6.0vw;
+	height:  3.1vh;	
+	margin-top: 0.7vh;
+}
+.botimg5{
+	width: 16.8vw;
+	height: 9.6vh;
+	position: absolute;
+	top: -3.4vh;
+	
+}
+.index_bot_img{
+	float: left;
+	position: relative;	
+}

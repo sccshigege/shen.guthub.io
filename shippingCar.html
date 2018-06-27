@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="css/myorder.css">
+	<script src="jquery-3.3.1.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<header>
+		<a href="index.html"><img src="images/11-2收货地址_03_1_03.png" alt="" class="myorder_img1"></a>
+	<div class="myorder_font">
+			我的订单
+	</div>		
+</header>
+<div class="warp" style="padding-top:0.1vw;">
+<!-- 	<nav>
+	<ul class="myorder_ul">
+		<li>全部订单</li>
+		<li>待付款</li>
+		<li>配送中</li>
+		<li style="margin-right:0;">已完成</li>
+	</ul>
+</nav> -->
+	<section >
+<!-- 		<div class="box">
+	<div class="sec_head">
+		<div class="sec_head_1">
+			<img src="images/9-我的订单_0_03.png" class="myorder_img2">
+			<span class="date">2015-12-01</span>
+		</div>
+		<div class="sec_head_2">
+			<div class="sechead_2_left">
+				<div class="daifukuan">
+					状态:<span class="span1">待付款</span>
+				</div>
+				<div class="zongjia">
+					总价:<span class="span1">¥29.00</span>
+				</div>
+			</div>
+			<div class="sechead_2_right">
+				<button class="myorder_btn1">去支付</button>
+			</div>
+		</div>
+	</div>
+</div> -->
+		<div class="secshipping_box">
+			<div class="secshipping_box_1">
+				<div class="secshipping_box_radio">
+					<img src="images/10-我的购物车1_03.png" class="shipping_img1">
+				</div>
+				<img src="images/12-订单详情_03.png" class="myorder_img3">
+				<div class="box_3">
+					<p class="myorder_p1">正宗江西赣南脐橙 新鲜水果橙子 甜嫩多汁 5斤包邮</p>
+					<div class="shipping_count">
+						<button class="shipping_btn1">-</button><span class="shipping_span1">1</span><button class="shipping_btn2">+</button>
+					</div>
+					<span class="shipping_span2">29.90</span><span class="shipping_fuhao">¥</span>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<footer>
+	<div class="footer_left">
+		应付总额:<span style="color: #f54d32;letter-spacing: 0.4vw;
+	font-family: 微软雅黑;">¥</span><span class="shipping_span3">29.90</span>
+	</div>
+	<a href="sublimt.html">
+		<div class="footer_right">
+			<div class="fr_left">
+				<img src="images/10-我的购物车1_013_03.png" class="shipping_img5">
+				<p class="shipping_p2">运费:20</p>
+			</div>
+			<div class="fr_right">
+				去结算
+			</div>
+		</div>
+	</a>
+
+</footer>
+</body>
+</html>
+<script>
+	$(".shipping_btn2").click(function () {
+		var count=$(".shipping_span1");
+		count.text(parseInt(count.text())+1);
+		var num=(parseInt(count.text()))*29.90;
+        $(".shipping_span3").text(Number(num).toFixed(2))
+    })
+	$(".shipping_btn1").click(function () {
+
+		if($(".shipping_span1").text()>"1")
+		{
+            $(".shipping_span1").text(parseInt($(".shipping_span1").text())-1)
+
+            var num=(parseInt($(".shipping_span1").text()))*29.90;
+            $(".shipping_span3").text(Number(num).toFixed(2))
+		}
+    })
+
+</script>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="css/login.css">
+    <script src="rem.js"></script>
+	<script src="jquery-3.3.1.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<header>
+		<img src="images/3-列表_03.png" alt="" class="details_img1">
+		
+		<button class="btn1"><a href="register.html" style="color:#88d549">去注册</a></button>
+	</header>
+
+	<section>
+		<form class="login" method="post">
+			<div class="user">
+				<img src="images/6-登录_03.png" alt="" class="loginimg1">
+				<div class="user_right">
+					<input type="text" placeholder="手机号/邮箱/用户名" id="name">
+				</div>
+			</div>
+			<div class="password">
+				<img src="images/6-登录1_03.png" class="loginimg2">
+				<div class="user_right">
+					<input type="password" placeholder="密码" id="password">
+				</div>
+			</div>
+		</form>
+		<div class="wangjimima">
+			<button class="btn2"><a href="" style="color:#88d549;font-size:0.12rem">忘记密码</a></button>
+		</div>
+		<div class="loginbtn">
+			<button class="btn3" onclick="login()">登录</button>
+		</div>
+		<div class="bottom">
+			<img src="images/6-登录1_02.png" alt="" class="loginimg3">
+		</div>
+	</section>
+</body>
+</html>
+<script>
+    $(function() {
+
+
+        function login() {
+            $.ajax({
+                //几个参数需要注意一下
+                type: "POST",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "/users/login" ,//url
+                data: $('#form1').serialize(),
+                success: function (result) {
+                    console.log(result);//打印服务端返回的数据(调试用)
+                    if (result.resultCode == 200) {
+                        alert("SUCCESS");
+                    }
+                    ;
+                },
+                error : function() {
+                    alert("异常！");
+                }
+            });
+        }
+
+
+     /*   $.ajax({
+            //url: "http://192.168.1.173/GIndent/getGIndent/1",//后台发送请求的地址
+            type: "post",
+            dataType: "json",
+            success: function (result) {
+
+            }
+
+        })*/
+    })
+
+</script>

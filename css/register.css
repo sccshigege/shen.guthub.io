@@ -1,0 +1,172 @@
+*{
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+/* html{font-size:62.5%;} */
+ html{
+	font-size: 12px;
+}  
+
+a{
+	text-decoration: none;
+	color: black;
+}
+header{
+	width: 100vw;
+	height: 8.5vh;
+	/*background-color: pink;*/
+	position: relative;	
+}
+.details_img1{
+	height: 2.1vh;
+    width: 3.75vw;
+    margin-left: 5.6vw;
+    margin-top: 3.5vh;
+    float: left;
+}
+.details{
+	float: left;
+	color: #88d549;
+	font-size: 1.1rem;
+	margin-top: 3.5vh;
+	margin-left: 32vw;
+}
+.btn1{
+	background-color: transparent;
+	border: none;
+	font-size: 1.0rem;
+	float: right;
+	margin-top: 3.6vh;
+	margin-right: 3vw;
+	color: #afafaf;
+	outline: none;
+}
+/*over*/
+
+
+section{
+	width: 100vw;
+	background-color: #eff2ec;
+	padding-top: 4.2vh;
+	height: 91vh;
+}
+.register{
+	width: 84vw;
+	height: 39.7vh;
+	background-color: white;
+	margin:auto;
+	left:0;
+	right: 0;
+	border-radius: 4vw;
+}
+
+.user{
+	width: 84vw;
+	/*height: 3.8vh;*/
+	overflow: hidden;
+	padding-top: 4.5vh;
+	margin-left: 5.9vw;
+}
+.registerimg1{
+	width:4.6vw;
+	height: 4.6vw; 
+	float: left;
+}
+.user_right{
+	width: 65vw;
+	height: 3.8vh;
+	float: left;
+	border-bottom: 0.1vw solid #ccc;
+	margin-left: 2vw;
+	
+}
+.user_right>input{
+	outline: none;
+	border: none;
+	text-indent: 4vw;
+	font-size: 0.9rem;
+	color: #adadad;
+	font-family: 微软雅黑;
+}
+.registerimg2{
+	float: left;
+	width: 4.6vw;
+	height: 3.0vh;
+}
+.validate{
+	width: 84vw;
+	/*height: 3.8vh;*/
+	overflow: hidden;
+	/*padding-top: 4.5vh;*/
+	margin-left: 5.9vw;
+	margin-top: 2.9vh;
+}
+.btn2{
+	border: 0;
+	font-family: 微软雅黑;
+	font-size: 0.9rem;
+	background-color: transparent;
+	outline: none;
+}
+.password{
+	width: 84vw;
+	/*height: 3.8vh;*/
+	overflow: hidden;
+	/*padding-top: 4.5vh;*/
+	margin-left: 5.9vw;
+	margin-top: 5.8vh;
+}
+.accept{
+	margin-top: 5.8vh;
+	overflow: hidden;
+	/*padding-top: 4.5vh;*/
+	margin-left: 5.9vw;
+	margin-top: 5.8vh;
+
+}
+.registerimg3{
+	float: left;
+	width: 4.6vw;
+	height: 3.0vh;
+	
+}
+.box{
+	float: left;
+	width: 5vw;
+	height: 5vw;
+	border-radius: 50%;
+	border: 0.2vw solid #ccc;
+	/*background-color: #88d549;*/
+	text-align: center;
+	margin-top: 0.5vh;
+}
+.registerimg4{
+	display: none;
+	width: 3vw;
+	height: 3vw;
+	vertical-align: middle;	 
+}
+.accept_right{
+	width: 65vw;
+	height: 3.8vh;
+	float: left;
+	margin-left: 4vw;
+	line-height: 3.8vh;
+}
+.registerbtn{
+	margin-top: 27vw;
+	text-align: center;
+}
+.btn3{
+	width: 85vw;
+	height: 6.1vh;
+	border: 0;
+	border-radius: 2vw;
+	background-color: #88d549;
+	color: white;
+	text-align: center;
+	line-height: 6.1vh;
+	font-family: 微软雅黑;
+	font-size: 1.2rem;
+}

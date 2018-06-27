@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="css/details.css">
+    <script src="rem.js"></script>
+	<script src="jquery-3.3.1.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<header>
+		<a href="list.html"><img src="images/3-列表_03.png" alt="" class="details_img1"></a>
+	</header>
+	<div class="banner">
+		<div class="bannerimg">
+			<ul class="banner_ul">
+				<li><a href=""><img src="images/4-详情页1_02.png" alt=""></a></li>
+				<li><a href=""><img src="images/4-详情页1_02.png" alt=""></a></li>
+				<li><a href=""><img src="images/4-详情页1_02.png" alt=""></a></li>
+				 <li><a href=""><img src="images/4-详情页1_02.png" alt=""></a></li>
+				<!-- <li><a href=""><img src="images/4-详情页1_02.png" alt=""></a></li>  -->
+			</ul>
+		</div>
+		<div class="btnbox">
+			<ul class="btn_ul">
+				<li ></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+		<img src="images/4-详情页_03.png" alt="" class="detailsimg2">
+	</div>
+
+	<section>
+		<div class="details_sec_title">
+			<p class="details_title"></p>
+			<div class="details_sel">
+				<p class="details_p1">限时促销价<span>¥:68.00</span></p><p class="details_p2">本来价<s>¥:68.00</s></p>
+			</div>
+		</div>
+
+		<div class="details_guige">
+			<p class="details_p3"></p>
+		</div>
+		<div class="details_much">
+			<div class="details_much_title">
+				果径:
+			</div>
+			<div class="details_much_cho">
+				<span class="span_guojin"></span><span class="span_guojin">80mm</span>
+			</div>
+		</div>
+		<div class="details_more">上拉查看图文详情</div>
+	</section>
+
+
+
+	<div class="index_bot">
+        <div class="index_bot_list">
+            <div class="index_bot_list1">
+                  <span id="span1">-</span>
+            </div> 
+              <div class="index_bot_list2">
+                  <span id="span2">1</span>
+            </div>
+            <div class="index_bot_list1">
+                  <span id="span3">+</span>
+            </div>
+	        <a href="shippingCar.html"><div class="index_bot_list3">
+		        <button>加入购物车</button>
+	        </div></a>
+
+        </div>
+        <div class="index_bot_img">
+	        <a href="shippingCar.html"><img src="images/gouwuche_09.png" alt="" class="botimg5"></a>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+	var btn = $(".btn_ul>li");//获取小按钮
+	var wimg = $(".banner_ul>li").width();//获取图片宽度
+	
+		//按钮点击事件
+		$(btn[0]).addClass("current");//默认
+		btn.click(function(){
+			//赋class同时清除同类的class
+			$(this).addClass("current").siblings().removeClass("current");
+			var num = $(this).index();//index()不传递参数，返回this的索引值
+			$(".banner_ul").animate({left:-num * 6.4+"rem" },500);//动画
+		});
+		//轮播
+		var t = setInterval(move,2000);//时间函数
+		function move(){
+			var num;		
+			btn.each(function(){ //遍历按钮
+				if($(this).hasClass("current")){			
+					num = $(this).index()+1;//+1 不然返回1
+					$(".banner_ul").animate({left:-num * 6.4+"rem"},500);//动画
+
+					if(num == btn.length){ //判断
+						$(".banner_ul").animate({left:"0"},0);
+						num=0;
+					}
+				}
+			});
+			$(btn[num]).addClass("current").siblings().removeClass("current");
+		}
+
+		//
+		$("#span3").click(function () {
+			$("#span2").text(parseInt($("#span2").text())+1)
+        })
+		$("#span1").click(function () {
+			if($("#span2").text()>1)
+			{
+                $("#span2").text(parseInt($("#span2").text())-1)
+			}
+        })
+
+	$(".span_guojin").click(function () {
+		$(this).css("background-color","#88d549").siblings().css("background-color","white")
+    })
+
+	$.ajax({
+		url:"http://192.168.1.177/Goods/getGoods/1",
+		type:"post",
+		datatype:"json",
+		success:function (result) {
+			$(".details_title").html(result.userInfo.GoodsById.title);
+			$(".details_p3").html("规格"+result.userInfo.GoodsById.size);
+			$(".span_guojin").eq(0).html(result.userInfo.GoodsById.parameter)
+        }
+	})
+</script>

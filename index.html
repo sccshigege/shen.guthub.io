@@ -1,358 +1,497 @@
-﻿
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-
-<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">-->
-<head runat="server">
-   <meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css"/>
-	<link rel="stylesheet" type="text/css" href="css/index.css"/>
-	<title>旅游网</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="css/index.css">
+	<script src="jquery-3.3.1.min.js"></script>
+	<!--<script src="rem.js"></script>-->
+    <title>Title</title>
 </head>
 <body>
-    <form id="form1" runat="server">
-   <!--头部-->
-		<div class="head">
-			<div class="head_img">
-				<!--轮播-->
-				<div id="myCarousel" class="carousel slide scrool_lb" data-ride="carousel">
-				<!-- 轮播（Carousel）指标 -->
-					<ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
-					</ol>
-				<div class="carousel-inner">
-					<div class="item active">
-						<img alt="" src="img/banner1.jpg" />
-						
-					</div>
-					<div class="item">
-						<img alt="" src="img/14969184362122.jpg" />
-						
-					</div>
-					<div class="item">
-						<img alt="" src="img/baner.jpg" />
-						
-					</div>
-				</div>
-				<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-				<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-			</div><!--轮播end-->
-			
-			<!--导航-->
-				<nav id="tf-menu" class="navbar nav_wid navbar-default">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">切换</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand logo" href="index.html"><%=Session["name"] %></a>
-                    </div>
-					
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                      <ul class="nav navbar-nav navbar-right nav_font" id="menu_back">
-                      		<li><a href="index.html">首页</a></li>
-                        <li><a href="gentuan.aspx">跟团游</a></li>
-                        <li><a href="zizhu.aspx">自助游</a></li>
-                        <li><a href="login.aspx" class="" >登录</a></li>
-                        <li><a href="register.aspx">注册</a></li>
-                      </ul>
-                    </div>
-                </div>
-       </nav><!--导航end-->
-			</div>
+    <header>
+		<img src="images/1-首页0_03.png" alt="" class="header-img">
+
+		<div class="header-search">
+            <input type="text" value="美味生鲜 尽在唯美" class="seach-text" >
+			<img src="images/saerch3_03.png" alt="" class="img-search">
+			<img src="images/search_03.png" alt="" class="img_search">
 		</div>
-		<!--head end-->
-		
-		<!--热门乡村-->
-		<div class="container">
-			<div class="row clearfix hot">
-			<p>热·门·乡·村</p>
-			<p class="beaut">Beautiful countryside</p>
-			<p class="beaut_img"><img src="img/zs.png"/></p>
-			</div>
-			<div class="row clearfix">
-				<div class="col-md-12 hot_list">
-				<div class="col-md-3 col-sm-3 col-xs-3 img_scales"><img class="img-responsive img_scale" src="img/hot1.jpg"/></div>
-				<div class="col-md-3 col-sm-3 col-xs-3 img_scales"><img class="img-responsive img_scale" src="img/hot1.jpg"/></div>
-				<div class="col-md-3 col-sm-3 col-xs-3 img_scales"><img class="img-responsive img_scale" src="img/hot1.jpg"/></div>
-				<div class="col-md-3 col-sm-3 col-xs-3 img_scales"><img class="img-responsive img_scale" src="img/hot1.jpg"/></div>
-				</div>
-			</div>
-			
-			<div class="row clearfix more">
-				<a class="host_more" href="#">查看更多</a>
-			</div>
-			
-		</div><!--热门乡村 end-->
-		
-		<!--热门古镇-->
-		<div class="town">
-			<div class="container">
-				<div class="row clearfix">
-					<p class="town_title">热·门·古·镇</p>
-					<p class="beaut_town">Beautiful town</p>
-				</div>
-				
-				<div class="row clearfix">
-					<div class="col-md-12">
-						<div class="col-md-4 col-sm-4">
-							<div class="twon_img img_scales">
-								<p class="twon_img_title">常德古镇一日游</p>
-								<a href="#"><img class="img-responsive img_scale" src="img/twon1.jpg"/></a>
-								<div class="twon_img_introduce">
-									<p class="pull-left price">￥299</p>
-									<div class="immediately pull-right"><a class="" href="#">立即抢购</a></div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-md-4 col-sm-4">
-							<div class="twon_img img_scales">
-								<p class="twon_img_title">常德古镇一日游</p>
-								<a href="#"><img class="img-responsive img_scale" src="img/twon1.jpg"/></a>
-								<div class="twon_img_introduce">
-									<p class="pull-left price">￥299</p>
-									<div class="immediately pull-right"><a class="" href="#">立即抢购</a></div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-md-4 col-sm-4">
-							<div class="twon_img img_scales">
-								<p class="twon_img_title">常德古镇一日游</p>
-								<a href="#"><img class="img-responsive img_scale" src="img/twon1.jpg"/></a>
-								<div class="twon_img_introduce">
-									<p class="pull-left price">￥299</p>
-									<div class="immediately pull-right"><a class="" href="#">立即抢购</a></div>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-				<div class="row clearfix twon_more">
-					<a class="twon_more_font" href="#">查看更多</a>
-				</div>
-			</div>
+		<div class="header_right">
+			<a href="">搜索</a>
 		</div>
-		<!--热门古镇 end-->
-		
-		<!--景区导览-->
-		<div class="scenic">
-			<div class="container">
-				<div class="row clearfix scenic_row">
-					<p class="scenic_title">景·区·导·览</p>
-					<p class="beaut_scenic">Scene area guide</p>
-					<p><img src="img/zs.png"/></p>
-				</div>
-				
-				<div class="row clearfix">
-					<div class="col-md-12">
-						<!--//pc端显示-->
-						<div class="col-md-3 col-sm-6 col-xs-6 clear_left">
-							<div class="scenic_border">
-								<div class="scenic_img"><img class="box_show" src="img/scenic.jpg"/></div>
-								<!--<div class="scenic_img_font">
-									<p>柳叶湖</p>
-								</div>-->
-							</div>
-						</div>
-						
-						<div class="col-md-3 col-sm-6 col-xs-6 clear_left">
-							<div class="scenic_border">
-								<div class="scenic_img"><img class="box_show" src="img/scenic2.jpg"/></div>
-								<!--<div class="scenic_img_font">
-									<p>柳叶湖</p>
-								</div>-->
-							</div>
-						</div>
-						
-						<div class="col-md-3 col-sm-6 col-xs-6 clear_left">
-							<div class="scenic_border">
-								<div class="scenic_img"><img class="box_show" src="img/scenic3.jpg"/></div>
-								<!--<div class="scenic_img_font">
-									<p>柳叶湖</p>
-								</div>-->
-							</div>
-						</div>
-						
-						<div class="col-md-3 col-sm-6 col-xs-6 clear_left">
-							<div class="scenic_border">
-								<div class="scenic_img"><img class="box_show" src="img/scenic.jpg"/></div>
-								<!--<div class="scenic_img_font">
-									<p>柳叶湖中</p>
-								</div>-->
-							</div>
-						</div>	
-					</div>
-						
-						<div class="row clearfix scenic_more">
-							<a class="scenic_more_font" href="#">查看更多</a>
-						</div>
-				</div>
-			</div>	
-		</div>
-		<!--景区导览 end-->
-		
-		<!--//美食-->
-		<div class="cate">
-			<div class="container">
-				<div class="row clearfix cate_row">
-					<p class="cate_title">特·色·美·食</p>
-					<p class="cate_scenic">LONG WAN CUISINE</p>
-					<p><img src="img/zs.png"/></p>
-				</div>
-				
-				<div class="row clearfix">
-					<div class="col-md-12">
-						<div class="col-md-3 col-sm-3 col-xs-3 clear_right">
-							<div class="cate_img"><img class="img-responsive" src="img/cate1.png"/></div>
-						</div>
-						
-						<div class="col-md-3 col-sm-3 col-xs-3 clear_right">
-							<div class="cate_img"><img class="img-responsive" src="img/cate3.png"/></div>
-						</div>
-						
-						<div class="col-md-3 col-sm-3 col-xs-3 clear_right">
-							<div class="cate_img"><img class="img-responsive" src="img/cate2.png"/></div>
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-3 clear_right">
-							<div class="cate_img"><img class="img-responsive" src="img/cate1.png"/></div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="row clearfix twon_more">
-					<a class="twon_more_font" href="#">查看更多</a>
-				</div>
-				
-			</div>	
-		</div>
-		<!--//美食 end-->
-		
-		<!--旅游动态-->
-		<div class="dynamic">
-			<div class="container">
-				<div class="row clearfix cate_row">
-					<p class="cate_title">最·新·旅·游·动·态</p>
-					<p class="cate_scenic">New tourism trends</p>
-					<p><img src="img/zs.png"/></p>
-				</div>
-				
-				<div class="row clearfix">
-						<div class="col-md-1"></div>
-						<div class="col-md-5 clear_right dt_img"><img class="img-responsive" src="img/dynamic.jpg"/></div>
-						<div class="col-md-6">
-							<div class="dynamic_introduce">
-								<p class="dynamic_title">游客点评</p>
-								<p>
-								<span class="dynamic_content">常德旅游，及阿什顿啊实践啊啥的都阿什顿活别阿斯顿啊是的后果啊少见多怪的好......</span>
-								<span class="dynamic_more"><a href="#">我要点评</a></span>
-								</p>
-							</div>
-							<div class="dynamic_introduce">
-								<p class="dynamic_title">游客点评</p>
-								<p>
-								<span class="dynamic_content">常德旅游地方，及阿asda是啊实啊啊是撒践活别阿斯顿啊是的后果啊少见多怪的好......</span>
-								<span class="dynamic_more message_bg"><a href="#">我要点评</a></span>
-								</p>
-							</div>
-							<div class="dynamic_introduce">
-								<p class="dynamic_title">游客点评</p>
-								<p>
-								<span class="dynamic_content">常德旅大卡司卡上的回复带回家游方，及阿啊实践活别阿斯顿啊是的后果啊少见多怪的好......</span>
-								<span class="dynamic_more yang_bg"><a href="#">我要点评</a></span>
-								</p>
-							</div>
-						</div>
-						
-				</div>
-				
-				
-			</div>
-		</div>
-		<!--旅游动态 end-->
-		
-		<!--footer-->
-		<div class="footer">
-			<div class="container">
-				<div class="row clearfix footer_font">
-					<p>版权@小半所有</p>
-				</div>
-				
-			</div>
-		</div>
-<!-- 按钮触发模态框 -->
-<style type="text/css">
-	.modal{
-		top: 30%;
-	}
-</style>
+    </header>
+    <!-- <div class="banner">
+        <div class="banner_img">
+            <a href="">
+                <img src="images/1-首页aaa_02.png" alt="">
+            </a>
+            <a href="">
+                <img src="images/1-首页aaa_02.png" alt="">
+            </a>
+            <a href="">
+                <img src="images/1-首页aaa_02.png" alt="">
+            </a>
+            <a href="">
+                <img src="images/1-首页aaa_02.png" alt="">
+            </a>
+            <a href="">
+                <img src="images/1-首页aaa_02.png" alt="">
+            </a>
+            
+        </div>   
+    
+    
+        <div class="bannerbtn">
+            <ul>
+                <li style="background-color:#734605"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li style="margin-right:0;"></li>
+            </ul>
+        </div>    
+    </div> -->
+    <div class="banner">
+        <div class="bannerimg">
+            <ul class="banner_ul">
+                <li><a href=""><img src="images/1-首页aaa_02.png" alt=""></a></li>
+                <li><a href=""><img src="images/1-首页aaa_02.png" alt=""></a></li>
+                <li><a href=""><img src="images/1-首页aaa_02.png" alt=""></a></li>
+                 <li><a href=""><img src="images/1-首页aaa_02.png" alt=""></a></li>
+                <li><a href=""><img src="images/1-首页aaa_02.png" alt=""></a></li>
+                <li><a href=""><img src="images/1-首页aaa_02.png" alt=""></a></li>
+                <!-- <li><a href=""><img src="images/4-详情页1_02.png" alt=""></a></li>  -->
+            </ul>
+        </div>
+        <div class="btnbox">
+            <ul class="btn_ul">
+                <li ></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="list">
+    	<div class="listall">
+    		<div class="list1">
+    			<img src="images/1-首页1_03.png" alt="">
+    			<p>热销排行</p>
+    		</div>
+    		<div class="list1">
+    			<img src="images/1-首页2_05.png" alt="">
+    			<p>我的分销</p>
+    		</div>
+    		<div class="list1">
+    			<img src="images/1-首页3_07.png" alt="">
+    			<p>唯美礼品</p>
+    		</div>
+		    <a href="myorder.html" style="display: block;">
+			    <div class="list1" style="margin-right:0;">
+				    <img src="images/1-首页4_09.png" alt="">
+				    <p>我的订单</p>
+			    </div> 
+		    </a>
+    		
+    	</div>
+    </div>
 
 
+    <section>
+    	<div class="fruit">
+    		<div class="friut_header">
+    			<img src="images/nav_02.png" alt="">
+    		</div>
+    		<div class="fruit_list">
+    			<div class="fruit_list1">
+    				<img src="images/apple_03.png" alt="">
+    				<div class="friut_list1_right">
+    					<p class="p_head">蓬莱红富士</p>
+    					<p class="p_apple">[<span style="font-size:2.3vw;">85#</span> 9枚/盒]
+    					</p>
+    					<p class="p_sel">
+    						<span class="span1">¥</span>
+    						<span class="span2">59</span>
+    					</p>
+    				</div>
+    			</div>
 
-<!-- 模态框（register） -->
-<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
-				</button>
-				<h4 class="modal-title" id="myModalLabel">
-					新用户注册
-				</h4>
-			</div>
-			<div class="modal-body">
-                            <div class="form-group">
-                                <label for="uname" class="col-sm-2 control-label">用户名</label>
-                                <div class="col-sm-9">
-                                    <input type="text" id="uname" name="uname" runat="server" class="form-control well" placeholder="请输入用户名"/>
-                                </div>
+    			<div class="fruit_list2">
+    				<div class="fruit_list2_left">
+    					<div class="list2_left1">
+    						<div class="left1_left">
+    							<p class="left_head">农夫山泉</p>
+    							<p class="left_apple">
+    								17.5°橙
+    							</p>
+    							<p class="left_sel">
+    								2.5KG12个装
+    							</p>
+    							<p class="left_sell">
+    								<span class="span3">¥</span>
+    								<span class="span4">59</span>
+    							</p>
+
+    						</div>
+    						<img src="images/orange_03.png" alt="">
+    					</div>
+						
+						<div class="list2_left1" style="border:none;">
+    						<div class="left1_left1">
+    							<p class="left_head1">墨西哥</p>
+    							<p class="left_apple1">
+    								牛油果
+    							</p>
+    							
+    							<p class="left_sell1" style="margin-top:1.5vh;">
+    								<span class="span3">¥</span>
+    								<span class="span4">69</span>
+    							</p>
+
+    						</div>
+    						<img src="images/qing_03.png" alt="">
+    					</div>
+
+    				</div>
+
+    				<div class="fruit_list2_right">
+    					<p class="p24">
+    						华柠浦江猕猴桃
+    					</p>
+
+    					<p class="p_sel" style="padding-left:5.0vw;margin-top:2.0vh">
+    						<span class="span1">¥</span>
+    						<span class="span2">69</span>
+    					</p>
+
+    					<img src="images/未标题-1_18.png" alt="">
+    				</div>
+    			</div>
+    		</div>
+    		<div class="fruit_bottom"></div>
+    	</div>
+
+    	<div class="veget">
+    		<div class="veget_header">
+    			<img src="images/nav2_02.png" alt="">
+    		</div>
+    		<div class="veget_list">
+    			<div class="veget_list1">	
+    				<div class="veget_list1_right">
+    					<p class="veget_head">农家有机蔬菜西红柿</p>
+    					<p class="veget_sel">
+    						<span class="span1">¥</span>
+    						<span class="span2">39</span>
+    					</p>
+    				</div>
+    				<img src="images/未标题-1_32.png" alt="">
+    			</div>
+
+    			<div class="veget_list2">
+    				<div class="veget_list2_left">
+    					<div class="veget_list2_left1">
+
+    						<img src="images/未标题-1_37.png" alt="" style="margin-left:2vw;">
+    						<div class="veget_left1_left">
+    							<p class="veget_left_head">新鲜茄子</p>
+    							
+    							
+    							<p class="veget_left_sell">
+    								<span class="span3" style="float:none;">¥</span>
+    								<span class="span4" style="float:none;">9.9</span>
+    							</p>
+
+    						</div>
+    						
+    					</div>
+						
+						<div class="veget_list2_left1" style="border-bottom:none;">
+
+    						<img src="images/未标题-1_44.png" alt="">
+    						<div class="veget_left1_left">
+    							<p class="veget_left_head">
+    								有机土豆
+    							</p>
+    							
+    							
+    							<p class="veget_left_sell">
+    								<span class="span3" style="float:none;">¥</span>
+    								<span class="span4" style="float:none;">6.9</span>
+    							</p>
+
+    						</div>
+    						
+    					</div>
+
+    				</div>
+
+    				<div class="veget_list2_right">
+    					<p class="p24" style="padding-top:2.5vh;">
+    						新鲜冬笋现挖
+    					</p>
+
+    					<p class="p_sel" style="padding-left:5.0vw;">
+    						<span class="span1">¥</span>
+    						<span class="span2">69</span>
+    					</p>
+
+    					<img src="images/未标题-1_03.png" alt="">
+    				</div>
+    			</div>
+    		</div>
+    		<div class="veget_bottom"></div>
+    	</div>
+
+    	<div class="fruit">
+    		<div class="friut_header">
+    			<img src="images/nav3_04.png" alt="">
+    		</div>
+    		<div class="fruit_list">
+    			<div class="fruit_list1">
+    				<img src="images/未标题-1_27.png" alt="" style="width:31.4vw;height:17.2vh;margin-left:10vw;margin-top:0.5vh;">
+    				<div class="friut_list1_right" >
+    					<p class="p_head" style="margin-right:10.4vw;">水产螃蟹膏蟹</p>
+    					
+    					<p class="p_sel">
+    						<span class="span1">¥</span>
+    						<span class="span2">580</span>
+    					</p>
+    				</div>
+    			</div>
+    			<div class="veget_list2">
+    				<div class="veget_list2_left">
+    					<div class="veget_list2_left1">
+
+    						<img src="images/未标题-1_48.png" alt="" style="margin-left:2vw;">
+    						<div class="veget_left1_left">
+    							<p class="veget_left_head">生态海鲈鱼</p>
+    							
+    							
+    							<p class="veget_left_sell">
+    								<span class="span3" style="float:none;">¥</span>
+    								<span class="span4" style="float:none;">9.9</span>
+    							</p>
+
+    						</div>
+    						
+    					</div>
+						
+						<div class="veget_list2_left1" style="border-bottom:none;">
+
+    						<img src="images/未标题-1_56.png" alt="" style="margin-left:1.5vw;">
+    						<div class="veget_left1_left">
+    							<p class="veget_left_head">
+    								九孔鲍鱼
+    							</p>
+    							
+    							
+    							<p class="veget_left_sell">
+    								<span class="span3" style="float:none;">¥</span>
+    								<span class="span4" style="float:none;">6.9</span>
+    							</p>
+
+    						</div>
+    						
+    					</div>
+
+    				</div>
+
+    				<div class="veget_list2_right">
+    					<p class="p24" style="padding-top:2.5vh;">
+    						海鲜特等鲳鱼
+    					</p>
+
+    					<p class="p_sel" style="padding-left:5.0vw;">
+    						<span class="span1">¥</span>
+    						<span class="span2">108</span>
+    					</p>
+
+    					<img src="images/未标题-1_09.png" alt="" style="width:45.3vw;height:15.9vh;margin-top:3.0vh;">
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="fruit_bottom"></div>
+    	</div>
+		
+		<div class="veget">
+    		<div class="veget_header">
+    			<img src="images/nav2_02.png" alt="" >
+    		</div>
+    		<div class="veget_list">
+    			<div class="veget_list1" style="overflow:hidden">	
+    				<div class="veget_list1_right">
+    					<p class="veget_head">多味香辣花生米</p>
+    					<p class="veget_sel">
+    						<span class="span1">¥</span>
+    						<span class="span2">19.9</span>
+    					</p>
+    				</div>
+    				<img src="images/未标题-1_35.png" alt="" style="width:38.9vw;height:20.5vh;margin-top:0;">
+    			</div>
+
+    			<div class="veget_list2" >
+    				<div class="veget_list2_left">
+    					<div class="veget_list2_left1">
+
+    						<img src="images/未标题-1_54.png" alt="" style="margin-left:2vw;">
+    						<div class="veget_left1_left">
+    							<p class="veget_left_head">夏威夷果</p>		
+    							<p class="veget_left_sell">
+    								<span class="span3" style="float:none;">¥</span>
+    								<span class="span4" style="float:none;">9.9</span>
+    							</p>
+
                             </div>
-                            <div class="form-group">
-                                <label for="upwd" class="col-sm-2 control-label">密码</label>
-                                <div class="col-sm-9">
-                                    <input type="password" id="upwd" name="upwd" runat="server" class="form-control well" placeholder="请输入密码"/>
-                                </div>
-                            </div>
-                        
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
-				</button>
-                <asp:Button ID="Button2" runat="server" Text="注册" class="btn btn-primary" 
-                    onclick="Button2_Click1" />
-			</div>
-		</div>
-		<!-- /.modal-content -->
-	</div>
-	<!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
-<script>
-    $(function () {
-        $('#myModal').modal({
-            keyboard: true
-        })
-    });
-</script>
-		
-		
-		
-		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-		<script type="text/javascript" src="dist/js/bootstrap.js" ></script>
-		<script type="text/javascript" src="js/nav.js" ></script>
-    </form>
+    						
+    					</div>
+						
+						<div class="veget_list2_left1" style="border-bottom:none;">
+
+    						<img src="images/未标题-1_51.png" alt="" style="margin-left:2.5vw;">
+    						<div class="veget_left1_left">
+    							<p class="veget_left_head">
+    								开口松子
+    							</p>		
+    							<p class="veget_left_sell">
+    								<span class="span3" style="float:none;">¥</span>
+    								<span class="span4" style="float:none;">6.9</span>
+    							</p>
+
+    						</div>
+    						
+    					</div>
+
+    				</div>
+
+    				<div class="veget_list2_right">
+    					<p class="p24" style="padding-top:2.5vh;">
+    						三惠紫薯
+    					</p>
+
+    					<p class="p_sel" style="padding-left:5.0vw;">
+    						<span class="span1">¥</span>
+    						<span class="span2">19.9</span>
+    					</p>
+
+    					<img src="images/未标题-1_24.png" alt="" style="width:38.75vw;height:20.2vh;margin-left:3.0vw;">
+    				</div>
+    			</div>
+    		
+    	   </div>
+            <div class="bottom">
+                
+            </div>
+    </div>
+    </section>
+
+    <div class="index_bot">
+        <div class="index_bot_list">
+	        <a href="index.html">
+		        <div class="index_bot_list1">
+			        <img src="images/house_09.png" alt="" class="botimg1" >
+			        <p style="margin-top: 0.4vh">首页</p>
+		        </div>
+	        </a>
+
+	        <a href="classify.html" style="display: block">
+		        <div class="index_bot_list1">
+			            <img src="images/list_11.png" alt="" class="botimg2" >
+			            <p style="margin-top:0.2vh;">分类</p>
+		        </div>
+	        </a>
+
+            <div class="index_bot_list1">
+               <a href=""><img src="images/bottom_12.png" alt="" class="botimg3"></a>
+            </div>
+	        <a href="myweimei.html" style="display:inline-block ">
+		        <div class="index_bot_list1" style="margin-right:0;">
+			           <img src="images/list2_13.png" alt="" class="botimg4" >
+			            <p>我的唯美</p>
+		        </div>
+	    </a>
+        </div>
+        <div class="index_bot_img">
+	        <a href="shippingCar.html"><img src="images/gouwuche_09.png" alt="" class="botimg5"></a>
+        </div>
+    </div>
 </body>
 </html>
+<script>
+	/* var btnbox=document.getElementsByClassName("bannerbtn")[0];
+    var ul=btnbox.getElementsByTagName("ul")[0];
+    var li=ul.getElementsByTagName("li");
+    var bannerimg=document.getElementsByClassName("banner_img")[0];
+    var banner=bannerimg.getElementsByTagName("a");
+    var container=document.getElementsByClassName("banner")[0];
+
+     for(var i=0;i<li.length;i++){
+         li[i].index=i;
+         li[i].onmouseover=function(){
+             for(var j=0;j<banner.length;j++){
+                 li[j].style.background="white";
+                 banner[j].style.display="none";
+             }
+             this.style.background="#734605";
+             banner[this.index].style.display="block"
+         }
+         li[i].onmouseout=function(){
+             num=this.index;
+         }
+         //定时器
+
+     }
+     var num=0;
+     var t=setInterval(move,2000);
+     function move(){
+         num++;
+         if(num>4){
+             num=0;
+         }
+         for(var i=0;i<li.length;i++){
+             li[i].style.background="white";
+             banner[i].style.display="none";
+         }
+         li[num].style.background="#734605";
+         banner[num].style.display="block"
+     }
+     container.onmouseover=function(){
+         clearInterval(t)
+     }
+     container.onmouseout=function(){
+         t=setInterval(move,2000)
+     }*/
+
+var btn = $(".btn_ul>li");//获取小按钮
+    var wimg = $(".banner_ul>li").width();//获取图片宽度
+    
+        //按钮点击事件
+        $(btn[0]).addClass("current");//默认
+        btn.click(function(){
+            //赋class同时清除同类的class
+            $(this).addClass("current").siblings().removeClass("current");
+            var num = $(this).index();//index()不传递参数，返回this的索引值
+            $(".banner_ul").animate({left:-num * 100+"vw" },500);//动画
+        });
+        //轮播
+        var t = setInterval(move,2000);//时间函数
+        function move(){
+            var num;        
+            btn.each(function(){ //遍历按钮
+                if($(this).hasClass("current")){            
+                    num = $(this).index()+1;//+1 不然返回1
+                    $(".banner_ul").animate({left:-num * 100+"vw"},500);//动画
+
+                    if(num == btn.length){ //判断
+                        $(".banner_ul").animate({left:"0"},0);
+                        num=0;
+                    }
+                }
+            });
+            $(btn[num]).addClass("current").siblings().removeClass("current");
+        }
+</script>

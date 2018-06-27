@@ -1,0 +1,237 @@
+*{
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+/* html{font-size:62.5%;} */
+ html{
+	font-size: 12px;
+}  
+
+a{
+	text-decoration: none;
+	color: black;
+}
+header{
+	width: 100vw;
+	height: 8.6vh;
+	/*background-color: red;*/
+}
+.orderdetails_img1
+{
+	margin-left: 5.9vw;
+	margin-top: 3.5vh;
+	float: left;
+	width:0.667rem;
+	height:  1rem; 
+	/* height: auto !important;  
+	    max-width: 100% !important; */
+}
+.orderdetails_font{
+	margin-top: 3.0vh;
+	margin-left: 32vw;
+	float: left;
+	color: #88d549;
+	font-size: 1.2rem;
+	font-family: 微软雅黑;
+}
+
+/**/
+section{
+	width: 100%;
+	background-color: #eff2ec;
+}
+.font{
+	margin-left: 1.5vw;
+	font-family: 微软雅黑;
+	font-weight: bold;
+	font-size: 1rem;
+}
+.orderdetails_head{
+	height: 7.3vh;
+	line-height: 7.3vh;
+}
+
+.orderdetails_details{
+	background-color: white;
+}
+.details_1{
+	height: 7.3vh;
+	line-height: 7.3vh;
+	border-bottom: 0.1vw solid #dedede;
+}
+.details_1_left{
+	width: 58vw;
+	float: left;
+	color: #666;
+	margin-left: 1.5vw;
+	font-family: 微软雅黑;
+}
+.details_1_right{
+	float: left;
+	color: #666;
+	/*margin-right: 2.5vw;*/
+	font-family: 微软雅黑;
+}
+.details_2_right{
+	float: left;
+	color: #666;
+	/*margin-right:6.6vw;*/
+	font-family: 微软雅黑;
+}
+.details_2{
+	height: 16.3vh;
+	width: 100%;
+	border-bottom: 0.1vw solid #dedede;
+}
+.receiptinformation{
+	color: #666;
+	margin-left: 1.5vw;
+	font-family: 微软雅黑;
+	margin-top: 2.6vh;
+}
+.receipt_name{
+	overflow: hidden;
+	margin-top: 2.6vh;
+}
+.name{
+	float: left;
+	color: #666;
+	margin-left: 1.5vw;
+	font-family: 微软雅黑;
+	width: 70.9vw;
+}
+.tel{
+	float: left;
+	color: #666;
+	font-family: 微软雅黑;
+}
+.add{
+	color: #666;
+	margin-left: 1.5vw;
+	font-family: 微软雅黑;	
+	margin-top: 2.6vh;
+}
+.details_3_left{
+	float: left;
+	color: #666;
+	font-family: 微软雅黑;
+	margin-left: 1.5vw;
+	width: 20vw;
+}
+.details_3_right{
+	float: left;
+	color: #666;
+	font-family: 微软雅黑;
+}
+.totalcommodityprice{
+	background-color: white;
+}
+.totalcommodityprice_3_left{
+	float: left;
+	color: #666;
+	font-family: 微软雅黑;
+	margin-left: 1.5vw;
+	width: 83vw;
+}
+.totalcommodityprice_3_right{
+	float: left;
+	color: #666;
+	font-family: 微软雅黑;
+	letter-spacing: 0.4vw;
+	color: #f54d32;
+}
+.details_3{
+	height: 8.3vh;
+	line-height: 7.3vh;
+}
+.totollist{
+	height: 15vh;
+	background-color: white;
+}
+.totollist_left{
+	width: 83vw;
+	overflow: hidden;
+	float: left;
+}
+.orderdetails_img2{
+	width: 4.1rem;
+	height: 4.1rem;
+	float: left;
+	margin-left: 1.5vw;
+	margin-top: 2.9vh;
+}
+.tf_font{
+	color: #666;
+	font-family: 微软雅黑;
+	letter-spacing: 0.1vw;
+	color: #666;
+	margin-top: 2.9vh;
+	margin-left: 2vw;
+	float: left;
+}
+.totllist_right{
+	float: left;
+}
+.danjio{
+	font-family: 微软雅黑;
+	letter-spacing: 0.1vw;
+	color: #f54d32;
+	margin-top: 3.8vh;
+}
+.count{
+	color: #666;
+	font-family: 微软雅黑;
+	letter-spacing: 0.1vw;
+	margin-top: 2.5vh;
+}
+.fapiao{
+	height: 10vh;
+	background-color: white;
+	padding-top: 2.2vh;
+}
+.fapiaosec{
+
+	color: #666;
+	font-family: 微软雅黑;
+	letter-spacing: 0.1vw;
+	margin-left: 1.5vw;
+}
+.bot{
+	height: 2.1vh;
+}
+footer{
+	width: 100%;
+	height: 8.6vh;
+}
+.footer_left{
+	height: 8.6vh;
+	line-height: 8.6vh;
+	margin-left: 1.5vw;
+	float: left;
+}
+
+.footer_span1,.footer_span2{
+	color: #f54d32;
+	font-family: 微软雅黑;
+	font-weight: bold;
+	letter-spacing: 0.2vw;
+}
+.footer_right{
+	float: right;
+	height: 8.6vh;
+	line-height: 8.6vh;
+}
+.quzhifu{
+	border: 0;
+	background-color: #f54d32;
+	color: white;
+	width: 20vw;
+	height:3.8vh;
+	border-radius: 1vw;
+	line-height: 3.8vh;
+	text-align: center; 
+	font-family: 微软雅黑;
+	letter-spacing: 0.2vw;
+	outline: none;
+}
